@@ -2,7 +2,6 @@
 # Other keys in whitelist contain things are in that branches mozconfigs and allowed to be missing from nightly builds.
 whitelist = {
     'mozilla-release': {},
-    'mozilla-esr31': {},
     'mozilla-esr38': {},
     'mozilla-beta': {},
     'comm-beta': {},
@@ -163,7 +162,7 @@ for branch in ('mozilla-release', 'comm-esr31', 'comm-esr38'):
     whitelist[branch]['android-x86'] += ['ac_add_options --enable-updater']
 
 
-for branch in ('mozilla-esr31', 'mozilla-esr38'):
+for branch in ('mozilla-esr38', ):
     for platform in all_platforms:
         whitelist[branch][platform] = [
             'ac_add_options --enable-official-branding',
