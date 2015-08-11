@@ -5,7 +5,6 @@ whitelist = {
     'mozilla-esr38': {},
     'mozilla-beta': {},
     'comm-beta': {},
-    'comm-esr31': {},
     'comm-esr38': {},
     'nightly': {},
     }
@@ -134,7 +133,7 @@ for branch in ('mozilla-beta', 'comm-beta'):
     whitelist[branch]['android-api-11'] += ['ac_add_options --with-branding=mobile/android/branding/beta']
 
 
-for branch in ('mozilla-release', 'comm-esr31', 'comm-esr38'):
+for branch in ('mozilla-release', 'comm-esr38'):
     for platform in all_platforms:
         whitelist[branch][platform] = [
             'ac_add_options --enable-update-channel=release',
